@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confiance Energy — Energia que gera confiança</title>
+  <meta name="description"
+    content="Confiance Energy: energia solar residencial, comercial e industrial no Nordeste. Do projeto ao pós-venda, com método, prazo e suporte garantido. Mais de 1200 projetos instalados.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <a href="#inicio" class="logo" aria-label="Confiance Energy">
+      <img src="assets/logo.png" alt="Confiance Energy" class="logo-img" style="height:44px;width:auto"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="logo-fallback" style="display:none">
+        <img src="assets/logo-icon.png" alt="Icon" style="height:38px;width:auto">
+        <span class="logo-text"><span class="logo-conf">CONFIANCE</span> <span class="logo-en">ENERGY</span></span>
+      </span>
+    </a>
+    <nav class="nav-desktop" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://wa.me/5584991465777" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" id="menuBtn" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="navMobile" aria-label="Menu mobile">
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#contato">Contato</a>
+    <a class="btn btn-primary" style="margin-top:8px;justify-content:center" href="https://wa.me/5584991465777"
+      target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="hero-glow glow-3"></div>
+      <div class="hero-particles" id="particles"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="badge">⚡ Energia que gera confiança</span>
+        <h1>Energia solar com <span class="highlight">transparência</span>, prazo e suporte real</h1>
+        <p class="hero-lead">Da análise técnica ao pós-venda, a Confiance Energy acompanha cada etapa do seu projeto em
+          todo o Nordeste — porque a sua economia começa com quem você pode confiar.</p>
+        <ul class="hero-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24">
+                <path d="M5 12l5 5L20 7" />
+              </svg></span>
+            Sistema homologado e gerando em até 45 dias
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24">
+                <path d="M5 12l5 5L20 7" />
+              </svg></span>
+            Portal de acompanhamento online: saiba exatamente em que etapa está seu projeto
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24">
+                <path d="M5 12l5 5L20 7" />
+              </svg></span>
+            Suporte garantido após a instalação, sem abandono
+          </li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg"
+            href="https://wa.me/5584991465777?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20Confiance%20Energy!"
+            target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Quero energia solar com confiança
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-sun-wrap">
+          <div class="sun-orbit orbit-1"></div>
+          <div class="sun-orbit orbit-2"></div>
+          <div class="sun-core">
+            <img src="assets/logo-icon.png" alt="Confiance Energy Icon" style="width:85px;height:85px">
+          </div>
+        </div>
+        <div class="hero-card float-card">
+          <div class="hc-icon">⚡</div>
+          <strong>Economia real</strong>
+          <p>Clientes economizando até 95% na conta de luz</p>
+        </div>
+        <div class="hero-card float-card-2">
+          <div class="hc-icon">🏆</div>
+          <strong>45 dias</strong>
+          <p>Prazo médio para início da geração</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Role para ver mais</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats">
+        <div class="stat-card"><strong>+1200</strong><span>Projetos instalados</span></div>
+        <div class="stat-card"><strong class="count" data-target="9">0</strong><span>Estados atendidos no
+            Nordeste</span></div>
+        <div class="stat-card"><strong class="count" data-target="45">0</strong><span>Dias para início da geração</span>
+        </div>
+        <div class="stat-card"><strong class="count" data-target="8">0</strong><span>Anos de experiência</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section-dark">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-badge">Quem somos</span>
+          <h2>Energia que gera confiança</h2>
+          <p>A <strong>Confiance Energy</strong> nasceu com um propósito claro: ser a empresa de energia solar que não
+            te abandona depois da assinatura. Atuamos em todo o <strong>Nordeste</strong> levando soluções
+            personalizadas para residências, empresas e grandes empreendimentos — com mais de 1.200 projetos instalados
+            e clientes em 9 estados.</p>
+          <p style="margin-top:16px">Nossa equipe técnica qualificada utiliza equipamentos de última geração, garantindo
+            eficiência máxima e durabilidade para o seu sistema — sempre com acompanhamento próximo e comunicação
+            transparente.</p>
+          <div class="about-pils">
+            <span class="pil">✅ Empresa homologada</span>
+            <span class="pil">✅ Equipe técnica certificada</span>
+            <span class="pil">✅ Pós-venda garantido</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card-stack">
+            <div class="acs-card acs-1">
+              <div class="acs-icon">☀️</div>
+              <h4>Projetos técnicos</h4>
+              <p>Dimensionamento personalizado para cada perfil de consumo</p>
+            </div>
+            <div class="acs-card acs-2">
+              <div class="acs-icon">🛡️</div>
+              <h4>Garantia real</h4>
+              <p>Suporte e manutenção após a instalação</p>
+            </div>
+            <div class="acs-card acs-3">
+              <div class="acs-icon">📱</div>
+              <h4>Acompanhamento</h4>
+              <p>Comunicação pelo WhatsApp em cada etapa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="section-mid">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">Processo</span>
+        <h2>Como funciona</h2>
+        <p>Da análise inicial à economia ativa — com prazo definido e comunicação transparente em cada etapa.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Consulta e análise</h3>
+          <p>Analisamos sua conta de energia e seu perfil de consumo para indicar a solução ideal.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Projeto técnico</h3>
+          <p>Dimensionamos o sistema sob medida e cuidamos de toda a documentação junto à concessionária.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Instalação</h3>
+          <p>Equipe técnica especializada realiza a instalação com segurança, organização e prazo cumprido.</p>
+        </div>
+        <div class="step step-portal">
+          <div class="step-num">4</div>
+          <h3>Portal de acompanhamento</h3>
+          <p>Acesse nosso portal online e veja em qual etapa do processo o seu projeto está — em tempo real, sem
+            precisar ligar.</p>
+          <span class="step-tag">🖥️ Novo</span>
+        </div>
+        <div class="step" style="grid-column:1/-1;max-width:280px;margin:0 auto">
+          <div class="step-num">5</div>
+          <h3>Economia ativa</h3>
+          <p>Após a homologação, seu sistema começa a gerar e você passa a economizar imediatamente.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:48px">
+        <a class="btn btn-primary btn-lg" href="https://wa.me/5584991465777" target="_blank" rel="noopener">Quero
+          começar agora →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="section-dark">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">Soluções</span>
+        <h2>Serviços</h2>
+        <p>Soluções completas para residências, empresas e geração de energia em larga escala.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="sc-icon">🏠</div>
+          <h3>Residencial</h3>
+          <p>Reduza a conta de luz da sua família com um projeto personalizado, instalação segura e retorno garantido.
+          </p>
+          <ul class="sc-list">
+            <li>Projeto sob medida</li>
+            <li>Instalação organizada</li>
+            <li>Monitoramento remoto</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/5584991465777?text=Tenho%20interesse"
+            target="_blank" rel="noopener">Saiba mais</a>
+        </div>
+        <div class="service-card service-card-highlight">
+          <div class="sc-badge-top">Mais popular</div>
+          <div class="sc-icon">🏢</div>
+          <h3>Comercial</h3>
+          <p>Reduza custos fixos, aumente sua margem e proteja sua empresa dos reajustes tarifários.</p>
+          <ul class="sc-list">
+            <li>Análise de viabilidade</li>
+            <li>Gestão documental</li>
+            <li>Suporte contínuo</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/5584991465777?text=Tenho%20interesse"
+            target="_blank" rel="noopener">Saiba mais</a>
+        </div>
+        <div class="service-card">
+          <div class="sc-icon">⚡</div>
+          <h3>Usinas em solo</h3>
+          <p>Projetos de médio e grande porte para geração em escala, com planejamento técnico robusto.</p>
+          <ul class="sc-list">
+            <li>Grandes instalações</li>
+            <li>Planejamento técnico</li>
+            <li>Gestão de documentação</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/5584991465777?text=Tenho%20interesse"
+            target="_blank" rel="noopener">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="projetos" class="section-mid">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">Portfólio</span>
+        <h2>Projetos realizados</h2>
+        <p>Execução que gera resultado real. Conheça alguns dos sistemas instalados pela Confiance Energy.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="assets/projetos/residencial.jpg"
+            alt="Projeto residencial Confiance Energy - painéis solares em telhado" loading="lazy">
+          <div class="portfolio-overlay">
+            <span class="po-tag">Residencial</span>
+            <h4>Sistema residencial</h4>
+            <p>Redução de até 95% na conta de energia</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="assets/projetos/comercial.jpg" alt="Projeto comercial Confiance Energy - painéis solares em empresa"
+            loading="lazy">
+          <div class="portfolio-overlay">
+            <span class="po-tag">Comercial</span>
+            <h4>AF ADMINISTRAÇÃO DE CONDOMINIOS</h4>
+            <p>Economia inteligente para condomínios</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="assets/projetos/usina.jpg" alt="Usina solar - Severiano Melo - geração em grande escala"
+            loading="lazy">
+          <div class="portfolio-overlay">
+            <span class="po-tag">Usina Solo</span>
+            <h4>Usina Severiano Melo</h4>
+            <p>Geração em larga escala com máxima eficiência</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="section-dark">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">Depoimentos</span>
+        <h2>Quem já confiou na Confiance</h2>
+        <p>Depoimentos reais de clientes satisfeitos — no Google e no Instagram. Clique para ver.</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <!-- Vídeo reels com embed do Instagram -->
+        <div class="tcard tcard-embed">
+          <div class="ig-embed-wrap">
+            <iframe src="https://www.instagram.com/reel/DWCDFR-Du6u/embed/" frameborder="0" scrolling="no"
+              allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-type">🎥 Depoimento em vídeo</div>
+            <a href="https://www.instagram.com/reel/DWCDFR-Du6u/" target="_blank" rel="noopener" class="tcard-link">Ver
+              no Instagram →</a>
+          </div>
+        </div>
+
+        <div class="tcard tcard-embed">
+          <div class="ig-embed-wrap">
+            <iframe src="https://www.instagram.com/reel/DCUsnRduJVo/embed/" frameborder="0" scrolling="no"
+              allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-type">🎥 Depoimento em vídeo</div>
+            <a href="https://www.instagram.com/reel/DCUsnRduJVo/" target="_blank" rel="noopener" class="tcard-link">Ver
+              no Instagram →</a>
+          </div>
+        </div>
+
+        <div class="tcard tcard-embed">
+          <div class="ig-embed-wrap">
+            <iframe src="https://www.instagram.com/reel/DQxQGAcEgAG/embed/" frameborder="0" scrolling="no"
+              allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-type">🎥 Depoimento em vídeo</div>
+            <a href="https://www.instagram.com/reel/DQxQGAcEgAG/" target="_blank" rel="noopener" class="tcard-link">Ver
+              no Instagram →</a>
+          </div>
+        </div>
+
+        <!-- Avaliações Google como posts do Instagram -->
+        <div class="tcard tcard-embed">
+          <div class="ig-embed-wrap">
+            <iframe src="https://www.instagram.com/p/DRCm9_2jvWw/embed/" frameborder="0" scrolling="no"
+              allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-type">⭐ Avaliação Google no Instagram</div>
+            <a href="https://www.instagram.com/p/DRCm9_2jvWw/" target="_blank" rel="noopener" class="tcard-link">Ver
+              post →</a>
+          </div>
+        </div>
+
+        <div class="tcard tcard-embed">
+          <div class="ig-embed-wrap">
+            <iframe src="https://www.instagram.com/p/DSab-YEDjzM/embed/" frameborder="0" scrolling="no"
+              allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-type">⭐ Avaliação Google no Instagram</div>
+            <a href="https://www.instagram.com/p/DSab-YEDjzM/" target="_blank" rel="noopener" class="tcard-link">Ver
+              post →</a>
+          </div>
+        </div>
+
+        <div class="tcard tcard-embed">
+          <div class="ig-embed-wrap">
+            <iframe src="https://www.instagram.com/p/DUVrXkMjsrJ/embed/" frameborder="0" scrolling="no"
+              allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-type">⭐ Avaliação Google no Instagram</div>
+            <a href="https://www.instagram.com/p/DUVrXkMjsrJ/" target="_blank" rel="noopener" class="tcard-link">Ver
+              post →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Pronto para começar a economizar?</h2>
+        <p>Fale com um especialista agora e descubra quanto você pode economizar todo mês.</p>
+        <a class="btn btn-dark btn-lg"
+          href="https://wa.me/5584991465777?text=Quero%20uma%20simula%C3%A7%C3%A3o%20gratuita!" target="_blank"
+          rel="noopener">
+          Simulação gratuita pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-dark">
+    <div class="container" style="max-width:780px">
+      <div class="section-head">
+        <span class="section-badge">Dúvidas</span>
+        <h2>Perguntas frequentes</h2>
+        <p>Respostas diretas para você investir com total confiança.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Como funciona a energia solar em casa?</summary>
+          <p>Os painéis fotovoltaicos captam a luz solar e transformam em energia elétrica. O excedente gerado vira
+            créditos na sua conta, compensando o consumo nos horários sem sol — tudo conforme as regras da
+            concessionária.</p>
+        </details>
+        <details>
+          <summary>Quanto tempo leva para instalar e começar a economizar?</summary>
+          <p>Na Confiance Energy, o prazo médio da aprovação à homologação é de 45 dias. Assim que o sistema é ativado
+            pela concessionária, você já começa a economizar na conta.</p>
+        </details>
+        <details>
+          <summary>O sistema funciona em dias nublados?</summary>
+          <p>Sim! O sistema continua gerando energia com menor intensidade em dias nublados. Com o saldo de créditos
+            acumulado nos dias ensolarados, a compensação se equilibra ao longo do mês.</p>
+        </details>
+        <details>
+          <summary>Quanto tempo dura o sistema solar?</summary>
+          <p>Os painéis têm vida útil de 25 a 30 anos, com garantia de performance. Os inversores têm vida útil de 10 a
+            15 anos. A Confiance Energy cuida do pós-venda para garantir o máximo desempenho por muito mais tempo.</p>
+        </details>
+        <details>
+          <summary>Preciso fazer manutenção?</summary>
+          <p>A manutenção é simples — basicamente limpeza periódica dos painéis. Nossa equipe oferece suporte e visitas
+            técnicas para garantir que tudo funcione no máximo desempenho.</p>
+        </details>
+        <details>
+          <summary>Como funciona o financiamento?</summary>
+          <p>Trabalhamos com diversas opções de financiamento, inclusive linhas especiais para energia solar com taxas
+            reduzidas. Fale com nosso consultor para encontrar a melhor condição para o seu perfil.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section-mid">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">Contato</span>
+        <h2>Vamos conversar?</h2>
+        <p>Atendemos todo o Nordeste com suporte local e equipe especializada.</p>
+      </div>
+      <div class="contact-grid contact-grid-2">
+        <div class="contact-card">
+          <div class="cc-icon">📍</div>
+          <h3>Endereço</h3>
+          <p>Av. Praia de Tibau, 2234<br>Ponta Negra, Natal/RN<br><small>CEP 59094-500</small></p>
+          <a class="btn-text" href="https://www.google.com/maps/search/Avenida+Praia+de+Tibau+2234+Ponta+Negra+Natal+RN"
+            target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+        <div class="contact-card contact-card-cta">
+          <div class="cc-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>Fale com um consultor real, sem robôs.<br><strong style="color:var(--white)">(84) 99146-5777</strong></p>
+          <a class="btn btn-primary" href="https://wa.me/5584991465777" target="_blank" rel="noopener"
+            style="width:100%;margin-top:12px;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <div class="logo footer-logo">
+          <img src="assets/logo.png" alt="Confiance Energy" class="logo-img" style="height:48px;width:auto"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">
+            <img src="assets/logo-icon.png" alt="Icon" style="height:34px;width:auto">
+            <span class="logo-text"><span class="logo-conf">CONFIANCE</span> <span class="logo-en">ENERGY</span></span>
+          </span>
+        </div>
+        <p>Energia que gera confiança. Suporte real em todo o Nordeste.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/confianceenergy" target="_blank" rel="noopener"
+            aria-label="Instagram @confianceenergy">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-title">Navegação</p>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Contato</p>
+        <ul>
+          <li><a href="https://wa.me/5584991465777" target="_blank" rel="noopener">(84) 99146-5777</a></li>
+          <li><a href="https://www.instagram.com/confianceenergy" target="_blank" rel="noopener">@confianceenergy</a>
+          </li>
+          <li><a href="#contato">Natal / RN</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy container">
+      <p>© 2026 Confiance Energy — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a class="whatsapp-float" href="https://wa.me/5584991465777" target="_blank" rel="noopener"
+    aria-label="WhatsApp Confiance Energy">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

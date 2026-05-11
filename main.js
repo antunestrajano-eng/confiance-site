@@ -37,7 +37,7 @@
         el.textContent = Math.floor(start) + (el.parentElement.nextElementSibling && el.parentElement.nextElementSibling.textContent.includes('%') ? '' : '');
         // check suffix
         var suffix = el.getAttribute('data-suffix') || '';
-        el.textContent = Math.floor(start) + suffix;
+        el.textContent = (start >= 1000 ? Math.floor(start/100)*100 : Math.floor(start)) + suffix;
       }, 16);
     });
   }

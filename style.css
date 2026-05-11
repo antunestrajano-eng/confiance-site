@@ -1417,3 +1417,67 @@ footer li a:hover {
   width: 30px;
   height: 30px;
 }
+/* ===== BLOG LINK NA NAV ===== */
+.nav-blog {
+  color: var(--yellow) !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(255, 184, 0, 0.25) !important;
+  border-radius: var(--radius-pill) !important;
+  padding: 6px 12px !important;
+}
+.nav-blog:hover {
+  background: rgba(255, 184, 0, 0.1) !important;
+  border-color: rgba(255, 184, 0, 0.5) !important;
+}
+.nav-mobile-blog {
+  color: var(--yellow) !important;
+  font-weight: 600 !important;
+}
+
+/* ===== BANNER FINANCIAMENTO ===== */
+.financing-banner {
+  margin-top: 48px;
+  background: linear-gradient(135deg, rgba(255,184,0,0.08) 0%, rgba(255,140,0,0.05) 100%);
+  border: 1px solid rgba(255,184,0,0.25);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.financing-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+  min-width: 260px;
+}
+.financing-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.financing-content strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.financing-content p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .financing-banner {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .financing-banner .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

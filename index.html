@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B7RPEGM7VG"></script>
+<!-- Google tag (gtag.js) — carregado de forma assíncrona e não bloqueante -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-B7RPEGM7VG"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-B7RPEGM7VG');
+gtag('config', 'AW-18038634066');
 </script>
-<!-- Google Ads tag -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18038634066"></script>
-<script>gtag('config', 'AW-18038634066');</script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,10 +62,12 @@ gtag('config', 'G-B7RPEGM7VG');
 
 <!-- Preload crítico -->
 <link rel="preload" href="assets/logo.png" as="image">
-
-<link rel="icon" href="favicon.png" type="image/png">
+<!-- Preconnect para recursos de terceiros -->
+<link rel="preconnect" href="https://www.instagram.com">
+<link rel="dns-prefetch" href="https://www.instagram.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="favicon.png" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -74,10 +76,10 @@ gtag('config', 'G-B7RPEGM7VG');
 <!-- HEADER -->
 <header class="header" id="header">
   <a href="#inicio" class="logo" aria-label="Confiance Energy">
-    <img src="assets/logo.png" alt="Confiance Energy" class="logo-img" style="height:44px;width:auto"
+    <img src="assets/logo.png" alt="Confiance Energy" class="logo-img" width="160" height="44" style="height:44px;width:auto"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
     <span class="logo-fallback" style="display:none">
-      <img src="assets/logo-icon.png" alt="Icon" style="height:38px;width:auto">
+      <img src="assets/logo-icon.png" alt="Icon" width="38" height="38" style="height:38px;width:auto">
       <span class="logo-text"><span class="logo-conf">CONFIANCE</span> <span class="logo-en">ENERGY</span></span>
     </span>
   </a>
@@ -164,7 +166,7 @@ gtag('config', 'G-B7RPEGM7VG');
         <div class="sun-orbit orbit-1"></div>
         <div class="sun-orbit orbit-2"></div>
         <div class="sun-core">
-          <img src="assets/logo-icon.png" alt="Confiance Energy Icon" style="width:85px;height:85px">
+          <img src="assets/logo-icon.png" alt="Confiance Energy Icon" width="85" height="85" style="width:85px;height:85px">
         </div>
       </div>
       <div class="hero-card float-card">
@@ -346,7 +348,7 @@ gtag('config', 'G-B7RPEGM7VG');
     </div>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="assets/projetos/residencial.jpg" alt="Projeto residencial Confiance Energy - painéis solares em telhado" loading="lazy">
+        <img src="assets/projetos/residencial.jpg" alt="Projeto residencial Confiance Energy - painéis solares em telhado" width="600" height="400" loading="lazy" decoding="async">
         <div class="portfolio-overlay">
           <span class="po-tag">Residencial</span>
           <h4>Sistema residencial</h4>
@@ -354,7 +356,7 @@ gtag('config', 'G-B7RPEGM7VG');
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="assets/projetos/comercial.jpg" alt="Projeto comercial Confiance Energy - painéis solares em empresa" loading="lazy">
+        <img src="assets/projetos/comercial.jpg" alt="Projeto comercial Confiance Energy - painéis solares em empresa" width="600" height="400" loading="lazy" decoding="async">
         <div class="portfolio-overlay">
           <span class="po-tag">Comercial</span>
           <h4>AF Administração de Condomínios</h4>
@@ -362,7 +364,7 @@ gtag('config', 'G-B7RPEGM7VG');
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="assets/projetos/usina.jpg" alt="Usina solar - Severiano Melo - geração em grande escala" loading="lazy">
+        <img src="assets/projetos/usina.jpg" alt="Usina solar - Severiano Melo - geração em grande escala" width="600" height="400" loading="lazy" decoding="async">
         <div class="portfolio-overlay">
           <span class="po-tag">Usina Solo</span>
           <h4>Usina Severiano Melo</h4>
@@ -384,7 +386,7 @@ gtag('config', 'G-B7RPEGM7VG');
     <div class="testimonials-grid">
       <div class="tcard tcard-embed">
         <div class="ig-embed-wrap">
-          <iframe src="https://www.instagram.com/reel/DWCDFR-Du6u/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe data-src="https://www.instagram.com/reel/DWCDFR-Du6u/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
         </div>
         <div class="tcard-body">
           <div class="tcard-type">🎥 Depoimento em vídeo</div>
@@ -393,7 +395,7 @@ gtag('config', 'G-B7RPEGM7VG');
       </div>
       <div class="tcard tcard-embed">
         <div class="ig-embed-wrap">
-          <iframe src="https://www.instagram.com/reel/DCUsnRduJVo/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe data-src="https://www.instagram.com/reel/DCUsnRduJVo/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
         </div>
         <div class="tcard-body">
           <div class="tcard-type">🎥 Depoimento em vídeo</div>
@@ -402,7 +404,7 @@ gtag('config', 'G-B7RPEGM7VG');
       </div>
       <div class="tcard tcard-embed">
         <div class="ig-embed-wrap">
-          <iframe src="https://www.instagram.com/reel/DQxQGAcEgAG/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe data-src="https://www.instagram.com/reel/DQxQGAcEgAG/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
         </div>
         <div class="tcard-body">
           <div class="tcard-type">🎥 Depoimento em vídeo</div>
@@ -411,7 +413,7 @@ gtag('config', 'G-B7RPEGM7VG');
       </div>
       <div class="tcard tcard-embed">
         <div class="ig-embed-wrap">
-          <iframe src="https://www.instagram.com/p/DRCm9_2jvWw/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe data-src="https://www.instagram.com/p/DRCm9_2jvWw/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
         </div>
         <div class="tcard-body">
           <div class="tcard-type">⭐ Avaliação Google no Instagram</div>
@@ -420,7 +422,7 @@ gtag('config', 'G-B7RPEGM7VG');
       </div>
       <div class="tcard tcard-embed">
         <div class="ig-embed-wrap">
-          <iframe src="https://www.instagram.com/p/DSab-YEDjzM/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe data-src="https://www.instagram.com/p/DSab-YEDjzM/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
         </div>
         <div class="tcard-body">
           <div class="tcard-type">⭐ Avaliação Google no Instagram</div>
@@ -429,7 +431,7 @@ gtag('config', 'G-B7RPEGM7VG');
       </div>
       <div class="tcard tcard-embed">
         <div class="ig-embed-wrap">
-          <iframe src="https://www.instagram.com/p/DUVrXkMjsrJ/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+          <iframe data-src="https://www.instagram.com/p/DUVrXkMjsrJ/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
         </div>
         <div class="tcard-body">
           <div class="tcard-type">⭐ Avaliação Google no Instagram</div>
@@ -529,10 +531,10 @@ gtag('config', 'G-B7RPEGM7VG');
   <div class="footer-inner container">
     <div class="footer-brand">
       <div class="logo footer-logo">
-        <img src="assets/logo.png" alt="Confiance Energy" class="logo-img" style="height:48px;width:auto"
+        <img src="assets/logo.png" alt="Confiance Energy" class="logo-img" width="180" height="48" style="height:48px;width:auto"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <span class="logo-fallback" style="display:none">
-          <img src="assets/logo-icon.png" alt="Icon" style="height:34px;width:auto">
+          <img src="assets/logo-icon.png" alt="Icon" width="34" height="34" style="height:34px;width:auto">
           <span class="logo-text"><span class="logo-conf">CONFIANCE</span> <span class="logo-en">ENERGY</span></span>
         </span>
       </div>
@@ -578,6 +580,6 @@ gtag('config', 'G-B7RPEGM7VG');
   </svg>
 </a>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>

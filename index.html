@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Google tag (gtag.js) — carregado de forma assíncrona e não bloqueante -->
+<!-- Google Analytics + Ads — unificados e não-bloqueantes -->
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-B7RPEGM7VG"></script>
@@ -60,15 +60,19 @@ gtag('config', 'AW-18038634066');
 }
 </script>
 
-<!-- Preload crítico -->
+<!-- Preloads críticos -->
 <link rel="preload" href="assets/logo.png" as="image">
-<!-- Preconnect para recursos de terceiros -->
-<link rel="preconnect" href="https://www.instagram.com">
-<link rel="dns-prefetch" href="https://www.instagram.com">
+<link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_KU7NSg.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="icon" href="favicon.png" type="image/png">
+<!-- Preconnects para terceiros -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" href="favicon.png" type="image/png">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://www.instagram.com">
+<link rel="dns-prefetch" href="https://www.instagram.com">
+<!-- font-display=swap: texto aparece imediatamente, fonte troca quando carregada -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -348,7 +352,7 @@ gtag('config', 'AW-18038634066');
     </div>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="assets/projetos/residencial.jpg" alt="Projeto residencial Confiance Energy - painéis solares em telhado" width="600" height="400" loading="lazy" decoding="async">
+        <picture><source srcset="assets/projetos/residencial.webp" type="image/webp"><img src="assets/projetos/residencial.jpg" alt="Projeto residencial Confiance Energy - painéis solares em telhado" width="600" height="400" loading="lazy" decoding="async"></picture>
         <div class="portfolio-overlay">
           <span class="po-tag">Residencial</span>
           <h4>Sistema residencial</h4>
@@ -356,7 +360,7 @@ gtag('config', 'AW-18038634066');
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="assets/projetos/comercial.jpg" alt="Projeto comercial Confiance Energy - painéis solares em empresa" width="600" height="400" loading="lazy" decoding="async">
+        <picture><source srcset="assets/projetos/comercial.webp" type="image/webp"><img src="assets/projetos/comercial.jpg" alt="Projeto comercial Confiance Energy - painéis solares em empresa" width="600" height="400" loading="lazy" decoding="async"></picture>
         <div class="portfolio-overlay">
           <span class="po-tag">Comercial</span>
           <h4>AF Administração de Condomínios</h4>
@@ -364,7 +368,7 @@ gtag('config', 'AW-18038634066');
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="assets/projetos/usina.jpg" alt="Usina solar - Severiano Melo - geração em grande escala" width="600" height="400" loading="lazy" decoding="async">
+        <picture><source srcset="assets/projetos/usina.webp" type="image/webp"><img src="assets/projetos/usina.jpg" alt="Usina solar - Severiano Melo - geração em grande escala" width="600" height="400" loading="lazy" decoding="async"></picture>
         <div class="portfolio-overlay">
           <span class="po-tag">Usina Solo</span>
           <h4>Usina Severiano Melo</h4>

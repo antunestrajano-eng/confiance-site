@@ -1,12 +1,10 @@
-// ── Executa após o DOM estar pronto (script tem defer) ──
 (function(){
 
-  // ── Header scroll effect ──
+  // ── Header scroll ──
   var header = document.getElementById('header');
   if(header){
     window.addEventListener('scroll', function(){
-      if(window.scrollY > 40) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
+      header.classList.toggle('scrolled', window.scrollY > 40);
     }, {passive: true});
   }
 
@@ -16,7 +14,7 @@
   if(btn && nav){
     btn.addEventListener('click', function(){
       var open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-expanded', String(open));
     });
     nav.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click', function(){
@@ -26,75 +24,76 @@
     });
   }
 
-  // ── Counter animation (acionada por IntersectionObserver) ──
-  function animateCounters(){
-    document.querySelectorAll('.count').forEach(function(el){
-      var target = parseInt(el.getAttribute('data-target'), 10);
-      var suffix = el.getAttribute('data-suffix') || '';
-      var start = 0;
-      var duration = 1800;
-      var step = target / (duration / 16);
-      var timer = setInterval(function(){
-        start += step;
-        if(start >= target){ start = target; clearInterval(timer); }
-        el.textContent = (start >= 1000 ? Math.floor(start/100)*100 : Math.floor(start)) + suffix;
-      }, 16);
-    });
-  }
+  if(!('IntersectionObserver' in window)) return;
 
-  if('IntersectionObserver' in window){
+  // ── Contadores animados ──
+  // Usa requestAnimationFrame para não bloquear a thread principal (fix: reflow forçado)
+  function animateCounter(el){
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var start = 0;
+    var startTime = null;
+    var duration = 1800;
 
-    // Contadores
-    var statsBar = document.querySelector('.stats-bar');
-    if(statsBar){
-      var triggered = false;
-      new IntersectionObserver(function(entries, obs){
-        if(entries[0].isIntersecting && !triggered){
-          triggered = true;
-          animateCounters();
-          obs.disconnect();
-        }
-      }, {threshold: 0.3}).observe(statsBar);
+    function step(timestamp){
+      if(!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      // easeOutQuart para desacelerar no final
+      var eased = 1 - Math.pow(1 - progress, 4);
+      var value = Math.floor(eased * target);
+      // Arredonda centenas para números grandes (ex: 1200+)
+      if(target >= 1000) value = Math.floor(value / 100) * 100;
+      el.textContent = value + suffix;
+      if(progress < 1) requestAnimationFrame(step);
+      else el.textContent = target + suffix;
     }
-
-    // ── Fade-in on scroll ──
-    var fadeEls = document.querySelectorAll('.stat-card, .step, .service-card, .portfolio-item, .tcard, .acs-card, .contact-card');
-    fadeEls.forEach(function(el){
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
-    });
-    var fadeObs = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          fadeObs.unobserve(entry.target); // para de observar após animar
-        }
-      });
-    }, {threshold: 0.12});
-    fadeEls.forEach(function(el){ fadeObs.observe(el); });
-
-    // ── Lazy load Instagram iframes ──
-    // Substitui data-src pelo src real apenas quando o iframe entra na tela,
-    // reduzindo significativamente o payload de rede inicial.
-    var iframeObs = new IntersectionObserver(function(entries, obs){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          var el = entry.target;
-          var lazySrc = el.getAttribute('data-src');
-          if(lazySrc){
-            el.src = lazySrc;
-            el.removeAttribute('data-src');
-          }
-          obs.unobserve(el);
-        }
-      });
-    }, {rootMargin: '200px'});
-
-    document.querySelectorAll('iframe[data-src]').forEach(function(iframe){
-      iframeObs.observe(iframe);
-    });
+    requestAnimationFrame(step);
   }
+
+  var statsBar = document.querySelector('.stats-bar');
+  if(statsBar){
+    var counterTriggered = false;
+    new IntersectionObserver(function(entries, obs){
+      if(entries[0].isIntersecting && !counterTriggered){
+        counterTriggered = true;
+        document.querySelectorAll('.count').forEach(animateCounter);
+        obs.disconnect();
+      }
+    }, {threshold: 0.3}).observe(statsBar);
+  }
+
+  // ── Fade-in on scroll ──
+  var fadeEls = document.querySelectorAll('.stat-card,.step,.service-card,.portfolio-item,.tcard,.acs-card,.contact-card');
+  // Agrupa leituras de estilo fora do loop para evitar reflow forçado
+  fadeEls.forEach(function(el){
+    el.style.cssText += 'opacity:0;transform:translateY(24px);transition:opacity 0.55s ease,transform 0.55s ease';
+  });
+  var fadeObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        fadeObs.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12});
+  fadeEls.forEach(function(el){ fadeObs.observe(el); });
+
+  // ── Lazy load iframes Instagram ──
+  // Só carrega quando entra na tela (200px antes), reduz payload inicial
+  var iframeObs = new IntersectionObserver(function(entries, obs){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var el = entry.target;
+        var src = el.getAttribute('data-src');
+        if(src){ el.src = src; el.removeAttribute('data-src'); }
+        obs.unobserve(el);
+      }
+    });
+  }, {rootMargin: '200px 0px'});
+
+  document.querySelectorAll('iframe[data-src]').forEach(function(iframe){
+    iframeObs.observe(iframe);
+  });
 
 })();

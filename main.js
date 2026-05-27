@@ -27,7 +27,6 @@
   if(!('IntersectionObserver' in window)) return;
 
   // ── Contadores animados ──
-  // Usa requestAnimationFrame para não bloquear a thread principal (fix: reflow forçado)
   function animateCounter(el){
     var target = parseInt(el.getAttribute('data-target'), 10);
     var suffix = el.getAttribute('data-suffix') || '';
@@ -38,10 +37,8 @@
     function step(timestamp){
       if(!startTime) startTime = timestamp;
       var progress = Math.min((timestamp - startTime) / duration, 1);
-      // easeOutQuart para desacelerar no final
       var eased = 1 - Math.pow(1 - progress, 4);
       var value = Math.floor(eased * target);
-      // Arredonda centenas para números grandes (ex: 1200+)
       if(target >= 1000) value = Math.floor(value / 100) * 100;
       el.textContent = value + suffix;
       if(progress < 1) requestAnimationFrame(step);
@@ -63,24 +60,28 @@
   }
 
   // ── Fade-in on scroll ──
+  // CORREÇÃO SEO: elementos começam visíveis no HTML (Googlebot lê tudo normalmente).
+  // A classe 'will-animate' é adicionada via JS — o Googlebot não a processa,
+  // então o conteúdo permanece visível para indexação.
   var fadeEls = document.querySelectorAll('.stat-card,.step,.service-card,.portfolio-item,.tcard,.acs-card,.contact-card');
-  // Agrupa leituras de estilo fora do loop para evitar reflow forçado
+
   fadeEls.forEach(function(el){
-    el.style.cssText += 'opacity:0;transform:translateY(24px);transition:opacity 0.55s ease,transform 0.55s ease';
+    el.classList.add('will-animate');
   });
+
   var fadeObs = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting){
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('animated');
+        entry.target.classList.remove('will-animate');
         fadeObs.unobserve(entry.target);
       }
     });
   }, {threshold: 0.12});
+
   fadeEls.forEach(function(el){ fadeObs.observe(el); });
 
   // ── Lazy load iframes Instagram ──
-  // Só carrega quando entra na tela (200px antes), reduz payload inicial
   var iframeObs = new IntersectionObserver(function(entries, obs){
     entries.forEach(function(entry){
       if(entry.isIntersecting){

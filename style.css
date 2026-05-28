@@ -1488,3 +1488,10 @@ footer li a:hover {
     display: none;
   }
 }
+
+/* Esconde "Role para ver mais" no mobile */
+@media (max-width: 768px) {
+  .hero-scroll-hint {
+    display: none;
+  }
+}

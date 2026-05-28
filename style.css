@@ -1481,3 +1481,10 @@ footer li a:hover {
     justify-content: center;
   }
 }
+
+/* ===== FIX MOBILE: float cards hero ===== */
+@media (max-width: 768px) {
+  .hero-visual {
+    display: none;
+  }
+}

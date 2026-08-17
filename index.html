@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Confiance Energy — Energia Solar em Natal/RN e todo o Nordeste</title>
-<meta name="description" content="Confiance Energy: empresa de energia solar em Natal, RN. Projetos residenciais, comerciais e industriais em todo o Nordeste. Mais de 1200 sistemas instalados, prazo de 45 dias e suporte pós-venda garantido.">
+<title>Energia solar em Natal/RN | Confiance Energy</title>
+<meta name="description" content="Confiance Energy: empresa de energia solar em Natal, RN. Projetos residenciais, comerciais e industriais em todo o Nordeste. Mais de 1500 sistemas instalados, prazo de 45 dias e suporte pós-venda garantido.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://confianceenergy.com/">
@@ -45,9 +45,9 @@ gtag('config', 'AW-18038634066');
 </script>
 
 <!-- Open Graph -->
-<meta property="og:title" content="Confiance Energy — Energia Solar em Natal/RN e todo o Nordeste">
-<meta property="og:description" content="Mais de 1200 projetos instalados em todo o Nordeste. Do projeto ao pós-venda com prazo de 45 dias e suporte garantido. Solicite sua simulação gratuita!">
-<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:title" content="Energia solar em Natal/RN | Confiance Energy">
+<meta property="og:description" content="Mais de 1500 projetos instalados em todo o Nordeste. Do projeto ao pós-venda com prazo de 45 dias e suporte garantido. Solicite sua simulação gratuita!">
+<meta property="og:image" content="assets/sede.jpg">
 <meta property="og:url" content="https://confianceenergy.com">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
@@ -55,9 +55,9 @@ gtag('config', 'AW-18038634066');
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Confiance Energy — Energia Solar em Natal/RN">
-<meta name="twitter:description" content="Mais de 1200 projetos instalados no Nordeste. Prazo de 45 dias e suporte pós-venda garantido.">
-<meta name="twitter:image" content="assets/og-image.jpg">
+<meta name="twitter:title" content="Energia solar em Natal/RN | Confiance Energy">
+<meta name="twitter:description" content="Mais de 1500 projetos instalados no Nordeste. Prazo de 45 dias e suporte pós-venda garantido.">
+<meta name="twitter:image" content="assets/sede.jpg">
 
 <!-- Schema Markup: LocalBusiness -->
 <script type="application/ld+json">
@@ -65,8 +65,9 @@ gtag('config', 'AW-18038634066');
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Confiance Energy",
-  "description": "Empresa de energia solar em Natal, RN. Projetos residenciais, comerciais e industriais em todo o Nordeste.",
+  "description": "Empresa de energia solar em Natal, RN. Projetos residenciais, comerciais e industriais em todo o Nordeste. Mais de 1500 sistemas instalados.",
   "url": "https://confianceenergy.com",
+  "image": "https://confianceenergy.com/assets/sede.jpg",
   "telephone": "+55-84-99146-5777",
   "address": {
     "@type": "PostalAddress",
@@ -127,6 +128,76 @@ gtag('config', 'AW-18038634066');
   0%, 100% { box-shadow: 0 4px 15px rgba(245,158,11,0.4); }
   50% { box-shadow: 0 4px 28px rgba(245,158,11,0.75); }
 }
+.hero-visual {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  min-height: auto !important;
+}
+.hero-sede {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 29, 77, 0.18);
+}
+.hero-sede img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.sede-badge {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: #fff;
+  color: #001d4d;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.sede-badge::before {
+  content: "✔ ";
+  color: #f59e0b;
+}
+.hero-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+.hero-fact {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.hero-fact strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.hero-fact p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin: 0;
+}
+.hero-fact .hc-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 2px 0 0;
+}
 /* Fix mobile logo flutuante */
 @media (max-width: 768px) {
   .logo-img {
@@ -151,6 +222,17 @@ gtag('config', 'AW-18038634066');
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+  .hero-visual {
+    display: flex !important;
+    min-height: auto;
+  }
+  .hero-sede img {
+    height: 240px;
+  }
+  .hero-facts {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
   }
 }
 </style>
@@ -217,7 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-inner">
     <div class="hero-content">
       <span class="badge">⚡ Energia que gera confiança</span>
-      <h1>Energia solar em <span class="highlight">Natal/RN</span> com transparência, prazo e suporte real</h1>
+      <h1>Energia solar em <span class="highlight">Natal/RN</span></h1>
       <p class="hero-lead">Da análise técnica ao pós-venda, a Confiance Energy acompanha cada etapa do seu projeto em Natal e em todo o Nordeste — porque a sua economia começa com quem você pode confiar.</p>
       <ul class="hero-list">
         <li>
@@ -255,22 +337,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-sun-wrap">
-        <div class="sun-orbit orbit-1"></div>
-        <div class="sun-orbit orbit-2"></div>
-        <div class="sun-core">
-          <img src="assets/logo-icon.png" alt="Confiance Energy Icon" width="85" height="85" style="width:85px;height:85px">
+      <div class="hero-sede">
+        <img src="assets/sede.jpg" alt="Sede da Confiance Energy em Natal/RN" width="640" height="800">
+        <span class="sede-badge">Sede em Natal, RN</span>
+      </div>
+      <div class="hero-facts">
+        <div class="hero-fact">
+          <div class="hc-icon">⚡</div>
+          <div>
+            <strong>Economia real</strong>
+            <p>Clientes economizando até 85% na conta de luz</p>
+          </div>
         </div>
-      </div>
-      <div class="hero-card float-card">
-        <div class="hc-icon">⚡</div>
-        <strong>Economia real</strong>
-        <p>Clientes economizando até 95% na conta de luz</p>
-      </div>
-      <div class="hero-card float-card-2">
-        <div class="hc-icon">🏆</div>
-        <strong>45 dias</strong>
-        <p>Prazo médio para início da geração</p>
+        <div class="hero-fact">
+          <div class="hc-icon">🏆</div>
+          <div>
+            <strong>45 dias</strong>
+            <p>Prazo médio para início da geração</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -284,7 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="stats-bar">
   <div class="container">
     <div class="stats">
-      <div class="stat-card"><strong class="count" data-target="1200" data-suffix="+">1200+</strong><span>Projetos instalados</span></div>
+      <div class="stat-card"><strong class="count" data-target="1500" data-suffix="+">1500+</strong><span>Projetos instalados</span></div>
       <div class="stat-card"><strong>RN · PB · CE · PE</strong><span>Estados atendidos</span></div>
       <div class="stat-card"><strong class="count" data-target="45">45</strong><span>Dias para início da geração</span></div>
       <div class="stat-card"><strong class="count" data-target="8">8</strong><span>Anos de experiência</span></div>
@@ -299,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="about-content reveal-up">
         <span class="section-badge">Quem somos</span>
         <h2>Energia que gera confiança</h2>
-        <p>A <strong>Confiance Energy</strong> nasceu com um propósito claro: ser a empresa de energia solar em <strong>Natal, RN</strong> que não te abandona depois da assinatura. Atuamos em todo o <strong>Rio Grande do Norte</strong>, <strong>Paraíba</strong>, <strong>Ceará</strong> e <strong>Pernambuco</strong> — levando soluções personalizadas para residências, empresas e grandes empreendimentos, com mais de 1.200 projetos instalados.</p>
+        <p>A <strong>Confiance Energy</strong> nasceu com um propósito claro: ser a empresa de energia solar em <strong>Natal, RN</strong> que não te abandona depois da assinatura. Atuamos em todo o <strong>Rio Grande do Norte</strong>, <strong>Paraíba</strong>, <strong>Ceará</strong> e <strong>Pernambuco</strong> — levando soluções personalizadas para residências, empresas e grandes empreendimentos, com mais de 1.500 projetos instalados.</p>
         <p style="margin-top:16px">Nossa equipe técnica qualificada utiliza equipamentos de última geração, garantindo eficiência máxima e durabilidade para o seu sistema — sempre com acompanhamento próximo e comunicação transparente em cada etapa.</p>
         <div class="about-pils">
           <span class="pil">✅ Empresa homologada</span>

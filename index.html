@@ -239,10 +239,28 @@ gtag('config', 'AW-18038634066');
   padding-bottom: 8px;
 }
 .tcard-google .tcard-stars {
-  padding: 20px 20px 0;
-  font-size: 1.15rem;
-  letter-spacing: 3px;
-  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 22px 20px 0;
+  color: #fbbc04;
+  letter-spacing: 0;
+  line-height: 1;
+}
+.tcard-google .tcard-stars svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  flex-shrink: 0;
+  display: block;
+}
+.tcard-google .tcard-score {
+  margin-left: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--text);
+  letter-spacing: 0;
 }
 .tcard-google blockquote {
   margin: 0;
@@ -633,9 +651,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="tcard tcard-google reveal-up">
-        <div class="tcard-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <div class="tcard-stars" aria-label="5,0 de 5 estrelas">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <span class="tcard-score">5,0</span>
+        </div>
         <div class="tcard-body">
-          <div class="tcard-type">⭐ Avaliação Google</div>
+          <div class="tcard-type">Avaliação no Google</div>
           <blockquote>
             <p>Atendimento ótimo e personalizado. Atenção da vendedora me chamou a atenção, explicações, a confiança que me foi passada. Foi o que me levou a fechar negócio com a Confiance Energy.</p>
             <cite>Rodrigo Massena</cite>
@@ -644,9 +669,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="tcard tcard-google reveal-up">
-        <div class="tcard-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <div class="tcard-stars" aria-label="5,0 de 5 estrelas">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <span class="tcard-score">5,0</span>
+        </div>
         <div class="tcard-body">
-          <div class="tcard-type">⭐ Avaliação Google</div>
+          <div class="tcard-type">Avaliação no Google</div>
           <blockquote>
             <p>Contatei a Confiance Energy por indicação de um amigo, o representante (Antunes) fez um excelente atendimento, sanou todas as dúvidas que tive, fechei contrato, agora só esperando os materiais e a instalação pra curtir minha energia limpa.</p>
             <cite>Geison Cleiton</cite>
@@ -655,9 +687,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="tcard tcard-google reveal-up">
-        <div class="tcard-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <div class="tcard-stars" aria-label="5,0 de 5 estrelas">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.7l1.2-6.6L2.5 9.5l6.6-.9L12 2.5z"/></svg>
+          <span class="tcard-score">5,0</span>
+        </div>
         <div class="tcard-body">
-          <div class="tcard-type">⭐ Avaliação Google</div>
+          <div class="tcard-type">Avaliação no Google</div>
           <blockquote>
             <p>Boa tarde! Fui muito bem atendido por Ingrid Islane sempre tirando minhas dúvidas e sem demora pra retorno até a hr de fecharmos o contrato.</p>
             <cite>Evodio Melo Silveira</cite>
